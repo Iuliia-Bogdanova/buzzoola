@@ -98,7 +98,7 @@ body {
     left: 0;
     transition: opacity 0.5s ease;
 
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 .slide.active {
@@ -131,4 +131,176 @@ body {
         width: fit-content;
         max-width: 100%;
     }
+}
+
+.slide__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: calc(85 * var(--unit)) calc(64 * var(--unit)) calc(40 * var(--unit));
+    gap: calc(40 * var(--unit));
+}
+
+.logo-subtitle {
+    width: fit-content;
+    height: calc(70 * var(--unit));
+}
+
+.slide2__steps {
+    position: relative;
+    height: calc(1311 * var(--unit));
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.step,
+.arrow {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.step1 {
+    width: calc(405 * var(--unit));
+    height: calc(431 * var(--unit));
+    top: 0;
+    left: calc(55 * var(--unit));
+    animation-delay: 0s;
+
+    @media (max-width: 360px) {
+        left: calc(20 * var(--unit));
+    }
+}
+
+.step2 {
+    width: calc(310 * var(--unit));
+    height: calc(417 * var(--unit));
+    top: calc(270 * var(--unit));
+    right: calc(55 * var(--unit));
+    animation-delay: 1s;
+
+    @media (max-width: 360px) {
+        right: calc(20 * var(--unit));
+    }
+}
+
+.step3 {
+    width: calc(339 * var(--unit));
+    height: calc(431 * var(--unit));
+    top: calc(660 * var(--unit));
+    left: calc(55 * var(--unit));
+    animation-delay: 2s;
+
+    @media (max-width: 360px) {
+        left: calc(20 * var(--unit));
+    }
+}
+
+.step4 {
+    width: calc(366 * var(--unit));
+    height: calc(439 * var(--unit));
+    bottom: 0;
+    right: calc(55 * var(--unit));
+    animation-delay: 3s;
+
+    @media (max-width: 360px) {
+        right: calc(20 * var(--unit));
+    }
+}
+
+.step__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: calc(100 * var(--unit));
+    margin-bottom: calc(40 * var(--unit));
+    font-size: calc(40 * var(--unit));
+    line-height: 1.12;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.arrow svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: 432px) {
+        display: none;
+    }
+}
+
+.arrow1 {
+    width: calc(161 * var(--unit));
+    height: calc(135 * var(--unit));
+    top: calc(303 * var(--unit));
+    left: calc(500 * var(--unit));
+    animation-delay: 0.5s;
+}
+
+.arrow2 {
+    width: calc(182 * var(--unit));
+    height: calc(109 * var(--unit));
+    top: calc(615 * var(--unit));
+    left: calc(460 * var(--unit));
+    animation-delay: 1.5s;
+}
+
+.arrow3 {
+    width: calc(187 * var(--unit));
+    height: calc(100 * var(--unit));
+    top: calc(900 * var(--unit));
+    left: calc(430 * var(--unit));
+    animation-delay: 2.5s;
+}
+
+
+
+/* потом появление третьего слайда через 5 секунд (3 + 2 задержка) */
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.slide3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: calc(65 * var(--unit));
+    gap: calc(100 * var(--unit));
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 5s;
+}
+
+.slide3__items {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.slide3__text {
+    width: calc(900 * var(--unit));
+    padding: 0 calc(64 * var(--unit)) calc(60 * var(--unit)) 0;
+    font-size: calc(55 * var(--unit));
+    line-height: 1.09;
+    text-align: right;
+}
+
+.slide3__img {
+    width: calc(941 * var(--unit));
 }

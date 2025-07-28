@@ -12,7 +12,7 @@
         <div class="banner">
             <div class="banner-inner">
                 <div class="slider">
-                    <div class="slide slide1 active">
+                    <div class="slide slide1">
                         <img
                             src="/assets/images/title.svg"
                             alt="Заголовок-логотип"
@@ -20,8 +20,91 @@
                         />
                         <button class="start-btn">Запустить анимацию</button>
                     </div>
-                    <div class="slide slide2"></div>
-                    <div class="slide slide3"></div>
+                    <div class="slide slide2">
+                        <div class="slide__logo">
+                            <img
+                                src="/assets/images/subtitle_2.svg"
+                                alt="Подзаголовок-логотип"
+                                class="logo-subtitle"
+                            />
+                            <img
+                                src="/assets/images/title.svg"
+                                alt="Заголовок-логотип"
+                                class="logo"
+                            />
+                        </div>
+                        <div class="slide2__steps">
+                            <div class="step step1">
+                                <div class="step__title">Регистрация</div>
+                                <img
+                                    src="/assets/images/step1.png"
+                                    alt="Регистрация"
+                                    class="step__img"
+                                />
+                            </div>
+                            <div class="arrow arrow1">
+                                <svg viewBox="0 0 161 135" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <path d="M158.256 131.992C159.868 131.822 161.038 130.378 160.868 128.766L158.103 102.496C157.933 100.884 156.489 99.7144 154.877 99.8841C153.264 100.054 152.095 101.498 152.265 103.11L154.723 126.461L131.372 128.919C129.76 129.089 128.591 130.533 128.76 132.145C128.93 133.757 130.374 134.927 131.986 134.757L158.256 131.992ZM2.50006 3.23315L0.653364 5.51437L156.102 131.354L157.949 129.073L159.796 126.792L4.34676 0.951941L2.50006 3.23315Z" fill="white" />
+                                </svg>
+                            </div>
+                            <div class="step step2">
+                                <div class="step__title">Заведение площадки </div>
+                                <img
+                                    src="/assets/images/step2.png"
+                                    alt="Заведение площадки "
+                                    class="step__img"
+                                />
+                            </div>
+                            <div class="arrow arrow2">
+                                <svg viewBox="0 0 182 109" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <path d="M0.690133 96.9323C0.221958 98.4842 1.10046 100.122 2.65232 100.59L27.9415 108.219C29.4934 108.688 31.131 107.809 31.5991 106.257C32.0673 104.705 31.1888 103.068 29.637 102.6L7.15767 95.8179L13.9395 73.3386C14.4076 71.7867 13.5291 70.1491 11.9773 69.681C10.4254 69.2128 8.78782 70.0913 8.31963 71.6432L0.690133 96.9323ZM179.741 3.23315L178.354 0.646818L2.11257 95.1937L3.50005 97.7801L4.88752 100.366L181.129 5.81949L179.741 3.23315Z" fill="white" />
+                                </svg>
+                            </div>
+                            <div class="step step3">
+                                <div class="step__title">Единый код</div>
+                                <img
+                                    src="/assets/images/step3.png"
+                                    alt="Единый код"
+                                    class="step__img"
+                                />
+                            </div>
+                            <div class="arrow arrow3">
+                                <svg viewBox="0 0 187 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <path d="M184.574 89.7063C186.094 89.1436 186.87 87.4551 186.308 85.9349L177.137 61.1627C176.575 59.6426 174.886 58.8665 173.366 59.4292C171.846 59.9919 171.07 61.6804 171.633 63.2005L179.784 85.2203L157.764 93.3715C156.244 93.9342 155.468 95.6227 156.03 97.1428C156.593 98.663 158.282 99.4391 159.802 98.8764L184.574 89.7063ZM1.83386 3.4231L0.608049 6.08986L182.329 89.6206L183.555 86.9538L184.781 84.2871L3.05968 0.756336L1.83386 3.4231Z" fill="white" />
+                                </svg>
+                            </div>
+                            <div class="step step4">
+                                <div class="step__title">Единая аналитика</div>
+                                <img
+                                    src="/assets/images/step4.png"
+                                    alt="Единая аналитика"
+                                    class="step__img"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide slide3 active">
+                        <div class="slide__logo">
+                            <img
+                                src="/assets/images/subtitle_3.svg"
+                                alt="Подзаголовок-логотип"
+                                class="logo-subtitle"
+                            />
+                            <img
+                                src="/assets/images/title.svg"
+                                alt="Заголовок-логотип"
+                                class="logo"
+                            />
+                        </div>
+                        <div class="slide3__items">
+                            <div class="slide3__text">Инструмент управления рекламой, как для экосистемных приложений, так и для прямых паблишеров.
+                            </div>
+                            <picture>
+                                <source srcset="/assets/images/MacBook.webp" type="image/webp" />
+                                <img src="/assets/images/MacBook.png" alt="Экран ноутбука" class="slide3__img" />
+                            </picture>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -29,11 +112,3 @@
         <script src="/script.js"></script>
     </body>
 </html>
-
-<!-- <picture>
-    <source
-        srcset="/assets/images/MacBook.webp"
-        type="image/webp"
-    />
-    <img src="/assets/images/MacBook.png" alt="Экран ноутбука" />
-</picture> -->
