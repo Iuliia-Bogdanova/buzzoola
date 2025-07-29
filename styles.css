@@ -34,7 +34,7 @@ button {
 @media (hover: hover) {
     button:hover {
         filter: brightness(1.1);
-        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.6);
     }
 }
 
@@ -95,14 +95,30 @@ body {
     left: 0;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateX(0);
 
     /* border: 1px solid green; */
+}
+
+.slide--exit-left {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.slide--enter-right {
+    transform: translateX(100%);
+    opacity: 0;
 }
 
 .slide.active {
     opacity: 1;
     pointer-events: auto;
+}
+
+.slide.active.slide--enter-right {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .slide1 {
@@ -281,25 +297,12 @@ body {
     left: calc(430 * var(--unit));
 }
 
-
-
-/* потом появление третьего слайда через 5 секунд (3 + 2 задержка) */
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
 .slide3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: calc(65 * var(--unit));
     gap: calc(100 * var(--unit));
-    opacity: 0;
-    /* animation: fadeIn 1s ease forwards;
-    animation-delay: 5s; */
 }
 
 .slide3__items {
