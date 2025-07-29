@@ -29,7 +29,6 @@ button {
     text-decoration: none;
     color: inherit;
     -webkit-tap-highlight-color: transparent;
-    transition: filter 0.3s ease, box-shadow 0.3s ease;
 }
 
 @media (hover: hover) {
@@ -92,10 +91,11 @@ body {
     height: calc(100% - calc(40 * var(--unit)));
     margin: calc(20 * var(--unit)) 0;
     position: absolute;
-    opacity: 0;
-    visibility: hidden;
     top: 0;
     left: 0;
+    opacity: 0;
+    /* visibility: hidden; */
+    pointer-events: none;
     transition: opacity 0.5s ease;
 
     /* border: 1px solid green; */
@@ -103,7 +103,8 @@ body {
 
 .slide.active {
     opacity: 1;
-    visibility: visible;
+    /* visibility: visible; */
+    pointer-events: auto;
 }
 
 .slide1 {
@@ -126,11 +127,17 @@ body {
     text-transform: uppercase;
     text-align: center;
     background-color: var(--accent-color);
+    transition: opacity 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
 
     @media (max-width: 360px) {
         width: fit-content;
         max-width: 100%;
     }
+}
+
+.start-btn.fade-out {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .slide__logo {
@@ -149,6 +156,12 @@ body {
 .slide2__steps {
     position: relative;
     height: calc(1311 * var(--unit));
+    opacity: 0; /* Скрываем изначально */
+    transition: opacity 0.3s ease;
+}
+
+.animate-steps {
+    opacity: 1; /* Показываем блок при добавлении класса */
 }
 
 @keyframes fadeInUp {
@@ -167,6 +180,11 @@ body {
     position: absolute;
     opacity: 0;
     transform: translateY(20px);
+    /* animation: fadeInUp 0.5s ease forwards; */
+}
+
+.animate-steps .step,
+.animate-steps .arrow {
     animation: fadeInUp 0.5s ease forwards;
 }
 
@@ -175,7 +193,7 @@ body {
     height: calc(431 * var(--unit));
     top: 0;
     left: calc(55 * var(--unit));
-    animation-delay: 0s;
+    animation-delay: 1s;
 
     @media (max-width: 360px) {
         left: calc(20 * var(--unit));
@@ -187,7 +205,7 @@ body {
     height: calc(417 * var(--unit));
     top: calc(270 * var(--unit));
     right: calc(55 * var(--unit));
-    animation-delay: 1s;
+    animation-delay: 2s;
 
     @media (max-width: 360px) {
         right: calc(20 * var(--unit));
@@ -199,7 +217,7 @@ body {
     height: calc(431 * var(--unit));
     top: calc(660 * var(--unit));
     left: calc(55 * var(--unit));
-    animation-delay: 2s;
+    animation-delay: 3s;
 
     @media (max-width: 360px) {
         left: calc(20 * var(--unit));
@@ -211,7 +229,7 @@ body {
     height: calc(439 * var(--unit));
     bottom: 0;
     right: calc(55 * var(--unit));
-    animation-delay: 3s;
+    animation-delay: 4s;
 
     @media (max-width: 360px) {
         right: calc(20 * var(--unit));
@@ -245,7 +263,7 @@ body {
     height: calc(135 * var(--unit));
     top: calc(303 * var(--unit));
     left: calc(500 * var(--unit));
-    animation-delay: 0.5s;
+    animation-delay: 1.5s;
 }
 
 .arrow2 {
@@ -253,7 +271,7 @@ body {
     height: calc(109 * var(--unit));
     top: calc(615 * var(--unit));
     left: calc(460 * var(--unit));
-    animation-delay: 1.5s;
+    animation-delay: 2.5s;
 }
 
 .arrow3 {
@@ -261,7 +279,7 @@ body {
     height: calc(100 * var(--unit));
     top: calc(900 * var(--unit));
     left: calc(430 * var(--unit));
-    animation-delay: 2.5s;
+    animation-delay: 3.5s;
 }
 
 
@@ -281,8 +299,8 @@ body {
     padding-bottom: calc(65 * var(--unit));
     gap: calc(100 * var(--unit));
     opacity: 0;
-    animation: fadeIn 1s ease forwards;
-    animation-delay: 5s;
+    /* animation: fadeIn 1s ease forwards;
+    animation-delay: 5s; */
 }
 
 .slide3__items {
