@@ -94,7 +94,6 @@ body {
     top: 0;
     left: 0;
     opacity: 0;
-    /* visibility: hidden; */
     pointer-events: none;
     transition: opacity 0.5s ease;
 
@@ -103,7 +102,6 @@ body {
 
 .slide.active {
     opacity: 1;
-    /* visibility: visible; */
     pointer-events: auto;
 }
 
@@ -156,12 +154,12 @@ body {
 .slide2__steps {
     position: relative;
     height: calc(1311 * var(--unit));
-    opacity: 0; /* Скрываем изначально */
+    opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .animate-steps {
-    opacity: 1; /* Показываем блок при добавлении класса */
+    opacity: 1;
 }
 
 @keyframes fadeInUp {
@@ -180,7 +178,6 @@ body {
     position: absolute;
     opacity: 0;
     transform: translateY(20px);
-    /* animation: fadeInUp 0.5s ease forwards; */
 }
 
 .animate-steps .step,
@@ -188,12 +185,20 @@ body {
     animation: fadeInUp 0.5s ease forwards;
 }
 
+.animate-steps .step1 { animation-delay: 0s; }
+.animate-steps .step2 { animation-delay: 1s; }
+.animate-steps .step3 { animation-delay: 2s; }
+.animate-steps .step4 { animation-delay: 3s; }
+
+.animate-steps .arrow1 { animation-delay: 0.5s; }
+.animate-steps .arrow2 { animation-delay: 1.5s; }
+.animate-steps .arrow3 { animation-delay: 2.5s; }
+
 .step1 {
     width: calc(405 * var(--unit));
     height: calc(431 * var(--unit));
     top: 0;
     left: calc(55 * var(--unit));
-    animation-delay: 1s;
 
     @media (max-width: 360px) {
         left: calc(20 * var(--unit));
@@ -205,7 +210,6 @@ body {
     height: calc(417 * var(--unit));
     top: calc(270 * var(--unit));
     right: calc(55 * var(--unit));
-    animation-delay: 2s;
 
     @media (max-width: 360px) {
         right: calc(20 * var(--unit));
@@ -217,7 +221,6 @@ body {
     height: calc(431 * var(--unit));
     top: calc(660 * var(--unit));
     left: calc(55 * var(--unit));
-    animation-delay: 3s;
 
     @media (max-width: 360px) {
         left: calc(20 * var(--unit));
@@ -229,7 +232,6 @@ body {
     height: calc(439 * var(--unit));
     bottom: 0;
     right: calc(55 * var(--unit));
-    animation-delay: 4s;
 
     @media (max-width: 360px) {
         right: calc(20 * var(--unit));
@@ -263,7 +265,6 @@ body {
     height: calc(135 * var(--unit));
     top: calc(303 * var(--unit));
     left: calc(500 * var(--unit));
-    animation-delay: 1.5s;
 }
 
 .arrow2 {
@@ -271,7 +272,6 @@ body {
     height: calc(109 * var(--unit));
     top: calc(615 * var(--unit));
     left: calc(460 * var(--unit));
-    animation-delay: 2.5s;
 }
 
 .arrow3 {
@@ -279,7 +279,6 @@ body {
     height: calc(100 * var(--unit));
     top: calc(900 * var(--unit));
     left: calc(430 * var(--unit));
-    animation-delay: 3.5s;
 }
 
 
