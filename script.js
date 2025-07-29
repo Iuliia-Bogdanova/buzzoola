@@ -6,10 +6,8 @@ document.getElementById("start-btn").addEventListener("click", () => {
     const steps = document.querySelector(".slide2__steps");
     const lastStep = document.querySelector(".step4");
 
-    // Убрать кнопку
     startBtn.classList.add("fade-out");
 
-    // Перейти к slide2 + анимация
     setTimeout(() => {
         slide1.classList.remove("active");
         slide2.classList.add("active");
@@ -58,7 +56,7 @@ document.getElementById("start-btn").addEventListener("click", () => {
                         startSlideCycle();
                     }, 5000); // slide2
                 }, 100); // Задержка slide2
-            }, 500); // Смахнуть slide2
+            }, 500); // Смахнуть slide3
         }, 3500); // slide3
     }
 });

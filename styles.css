@@ -34,7 +34,8 @@ button {
 @media (hover: hover) {
     button:hover {
         filter: brightness(1.1);
-        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.6);
+        box-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
+        transition: filter 0.2s ease, box-shadow 0.2s ease;
     }
 }
 
@@ -59,13 +60,13 @@ body {
     font-weight: 700;
     color: var(--font-color);
     background-color: var(--bg-color);
-    /* overflow: hidden; */
 }
 
 .banner {
     width: 100vw;
     height: 100vh;
     position: relative;
+    overflow: hidden;
 }
 
 .banner-inner {
@@ -75,7 +76,7 @@ body {
     margin: 0 auto;
     position: relative;
 
-    --unit: calc(100vh / 1920); /* 1px макетной высоты */
+    --unit: calc(100vh / 1920); /* 1px высоты по макету*/
 }
 
 .slider {
@@ -97,8 +98,6 @@ body {
     pointer-events: none;
     transition: opacity 0.5s ease, transform 0.5s ease;
     transform: translateX(0);
-
-    /* border: 1px solid green; */
 }
 
 .slide--exit-left {
